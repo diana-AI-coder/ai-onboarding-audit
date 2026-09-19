@@ -29,13 +29,16 @@ python -m src.cli serve --port 8017
 
 ```json
 {
-  "dataDir":   "C:\\...\\data",
-  "docsDir":   "C:\\...\\docs",
-  "outDir":    "C:\\...\\examples\\scenario_report",
+  "dataDir":   "data",
+  "docsDir":   "docs",
+  "outDir":    "examples/scenario_report",
   "formats":   ["md", "docx", "pptx"],
   "candidate": "Анна Иванова"
 }
 ```
+
+Пути можно указывать относительно каталога, из которого запущен сервис
+(ориентир — корень репозитория).
 
 Ответ: `{ok, triggered_by, n_novices, critical, warnings, coverage, artifacts}`.
 Ошибки источников — `412`, ошибки исполнения — `500`.
