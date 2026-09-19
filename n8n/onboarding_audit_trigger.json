@@ -1,0 +1,121 @@
+{
+  "name": "ИИ-аудит онбординга · webhook-триггер",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "onboarding-audit",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "a1-webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [-420, 0],
+      "webhookId": "onboarding-audit-hook",
+      "webhookIdGenerated": false,
+      "properties": {}
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a2-set-payload",
+              "name": "payload",
+              "value": "={{ JSON.stringify({ dataDir: $json.dataDir, docsDir: $json.docsDir, outDir: $json.outDir, formats: $json.formats ? $json.formats : ['md', 'docx', 'pptx'], candidate: $json.candidate ? $json.candidate : 'n8n-триггер' }) }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a2-set",
+      "name": "Собрать тело запроса",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [-200, 0],
+      "properties": {}
+    },
+    {
+      "parameters": {
+        "url": "http://127.0.0.1:8017/audit",
+        "method": "POST",
+        "authentication": "none",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.payload }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a3-http",
+      "name": "Локальный аудит (POST /audit)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [20, 0],
+      "properties": {}
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "id": "a4-respond",
+      "name": "Вернуть результат",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [260, 0],
+      "properties": {}
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Собрать тело запроса",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Собрать тело запроса": {
+      "main": [
+        [
+          {
+            "node": "Локальный аудит (POST /audit)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Локальный аудит (POST /audit)": {
+      "main": [
+        [
+          {
+            "node": "Вернуть результат",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false,
+  "pinData": {},
+  "versionId": "onboarding-audit-v1"
+}

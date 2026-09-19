@@ -1,0 +1,41 @@
+flowchart TB
+    CLI["CLI<br/>run / verify / serve :8017"]
+    N8N["n8n webhook<br/>POST /audit"]
+    DATA[("data/<br/>onboarding_registry.xlsx<br/>novices.xlsx")]
+    DOCS[("docs/<br/>чек-листы · dogovor-trudovoy.md")]
+    PARSER["excel_parser.load()"]
+    METRICS["metrics.measure()"]
+    MOD["save_metrics()"]
+    HR["hr_expert"]
+    DA["data_analyst"]
+    CM["compliance"]
+    FIND["Findings"]
+    REC["recommender.recommend()<br/>план: действие / владелец / срок"]
+    RES["AuditResult"]
+    MD["report_md<br/>audit_report.md"]
+    DOCX["report_docx<br/>audit_report.docx"]
+    PPTX["deck_pptx<br/>audit_presentation.pptx"]
+    MT["audit_metrics.json"]
+
+    CLI --> DATA
+    N8N --> DATA
+    N8N --> DOCS
+    DATA --> PARSER
+    DOCS -.RAG.-> HR
+    DOCS -.RAG.-> DA
+    DOCS -.RAG.-> CM
+    DOCS --> METRICS
+    MOD --> METRICS
+    PARSER --> METRICS
+    METRICS --> HR
+    METRICS --> DA
+    METRICS --> CM
+    HR --> FIND
+    DA --> FIND
+    CM --> FIND
+    FIND --> REC
+    REC --> RES
+    RES --> MD
+    RES --> DOCX
+    RES --> PPTX
+    RES --> MT

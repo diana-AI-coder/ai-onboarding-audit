@@ -1,0 +1,12 @@
+{
+  "$comment": "Онлайн-сценарий онбординга новичка. n8n отправляет этот объект на POST /audit; атрибуты попадают в отчёт как контекст запуска (candidate).",
+  "scenario_id": "SCN-2026-091",
+  "candidate": "Анна Иванова",
+  "position": "Junior HR-аналитик",
+  "start_date": "2026-10-01",
+  "dataDir": "C:\\Users\\PC\\Documents\\.opencode\\opencode\\анализ резюме\\_new\\onboarding-audit\\data",
+  "docsDir": "C:\\Users\\PC\\Documents\\.opencode\\opencode\\анализ резюме\\_new\\onboarding-audit\\docs",
+  "outDir": "C:\\Users\\PC\\Documents\\.opencode\\opencode\\анализ резюме\\_new\\onboarding-audit\\examples\\scenario_report",
+  "formats": ["md", "docx", "pptx"],
+  "notes": "Первый аудит нового цикла. Ожидается проверка соблюдения фреймворка онбординга после назначения владельца этапа «Месяц 1»."
+}

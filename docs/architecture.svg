@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 806" width="100%" height="auto" font-family="Segoe UI, Arial, sans-serif">
+<defs><marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0L8,3L0,6Z" fill="#5a7393"/></marker></defs>
+<text x="470" y="34" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#1d3557">onboarding-audit — архитектура</text>
+<text x="470" y="56" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#5a7393">источники — метрики — три агента — план действий — отчёты</text>
+<rect x="40" y="82" width="860" height="72" rx="10" fill="#f2f6fb" stroke="#c5d3e6" stroke-width="1"/>
+<text x="54" y="106" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a7393">Запуск</text>
+<rect x="60" y="108" width="260" height="42" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="60" y="108" width="260" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="60" y="120" width="260" height="14" fill="#dce8f7" stroke="none"/>
+<text x="190" y="126" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">CLI</text>
+<text x="190" y="154" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">run / verify / serve :8017</text>
+<rect x="360" y="108" width="300" height="42" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="360" y="108" width="300" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="360" y="120" width="300" height="14" fill="#dce8f7" stroke="none"/>
+<text x="510" y="126" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">n8n webhook</text>
+<text x="510" y="154" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">POST /audit → pipeline()</text>
+<rect x="700" y="108" width="180" height="42" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="700" y="108" width="180" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="700" y="120" width="180" height="14" fill="#dce8f7" stroke="none"/>
+<text x="790" y="126" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">HTTP</text>
+<text x="790" y="154" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">412 / 400 / 500</text>
+<rect x="40" y="182" width="860" height="112" rx="10" fill="#f2f6fb" stroke="#c5d3e6" stroke-width="1"/>
+<text x="54" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a7393">Источники</text>
+<rect x="60" y="214" width="240" height="60" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="60" y="214" width="240" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="60" y="226" width="240" height="14" fill="#dce8f7" stroke="none"/>
+<text x="180" y="232" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">data/</text>
+<text x="180" y="260" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">onboarding_registry.xlsx</text>
+<text x="180" y="278" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">novices.xlsx</text>
+<rect x="330" y="214" width="300" height="60" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="330" y="214" width="300" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="330" y="226" width="300" height="14" fill="#dce8f7" stroke="none"/>
+<text x="480" y="232" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">docs/</text>
+<text x="480" y="260" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">чек-листы 5 этапов · md</text>
+<text x="480" y="278" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">dogovor-trudovoy.md</text>
+<text x="480" y="296" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">(RAG-контекст агентам)</text>
+<rect x="670" y="214" width="210" height="60" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="670" y="214" width="210" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="670" y="226" width="210" height="14" fill="#dce8f7" stroke="none"/>
+<text x="775" y="232" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">model</text>
+<text x="775" y="260" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">Finding · Metrics</text>
+<text x="775" y="278" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">AuditData · AuditResult</text>
+<rect x="40" y="322" width="860" height="92" rx="10" fill="#f2f6fb" stroke="#c5d3e6" stroke-width="1"/>
+<text x="54" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a7393">Приём и метрики</text>
+<rect x="60" y="354" width="240" height="54" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="60" y="354" width="240" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="60" y="366" width="240" height="14" fill="#dce8f7" stroke="none"/>
+<text x="180" y="372" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">excel_parser.load()</text>
+<text x="180" y="400" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">реестр + новички → AuditData</text>
+<rect x="340" y="354" width="260" height="54" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="340" y="354" width="260" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="340" y="366" width="260" height="14" fill="#dce8f7" stroke="none"/>
+<text x="470" y="372" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">metrics.measure()</text>
+<text x="470" y="400" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">сроки · переносы · отсев</text>
+<text x="470" y="418" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">покрытие этапов</text>
+<rect x="660" y="354" width="220" height="54" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="660" y="354" width="220" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="660" y="366" width="220" height="14" fill="#dce8f7" stroke="none"/>
+<text x="770" y="372" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">prompts/</text>
+<text x="770" y="400" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">промпты 5 ролей</text>
+<text x="770" y="418" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">.md-инструкции</text>
+<rect x="40" y="442" width="860" height="112" rx="10" fill="#f2f6fb" stroke="#c5d3e6" stroke-width="1"/>
+<text x="54" y="466" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a7393">Агенты анализа (мультиагент, промпты в src/audit/prompts)</text>
+<rect x="60" y="474" width="250" height="72" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="60" y="474" width="250" height="26" rx="8" fill="#cfe3cf" stroke="none"/>
+<rect x="60" y="486" width="250" height="14" fill="#cfe3cf" stroke="none"/>
+<text x="185" y="492" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">hr_expert</text>
+<text x="185" y="520" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#33415c">процесс и план развития</text>
+<text x="185" y="538" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#33415c">обязательные элементы</text>
+<rect x="345" y="474" width="250" height="72" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="345" y="474" width="250" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="345" y="486" width="250" height="14" fill="#dce8f7" stroke="none"/>
+<text x="470" y="492" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">data_analyst</text>
+<text x="470" y="520" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#33415c">день 1 · месяц 1 · 90 дней</text>
+<text x="470" y="538" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#33415c">пересроки, отсев, скорость</text>
+<rect x="630" y="474" width="250" height="72" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="630" y="474" width="250" height="26" rx="8" fill="#e9d8f4" stroke="none"/>
+<rect x="630" y="486" width="250" height="14" fill="#e9d8f4" stroke="none"/>
+<text x="755" y="492" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">compliance</text>
+<text x="755" y="520" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#33415c">ГОСТ Р ИСО 9001</text>
+<text x="755" y="538" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#33415c">владелец процесса</text>
+<rect x="40" y="578" width="860" height="88" rx="10" fill="#f2f6fb" stroke="#c5d3e6" stroke-width="1"/>
+<text x="54" y="602" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a7393">Синтез</text>
+<rect x="60" y="610" width="240" height="52" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="60" y="610" width="240" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="60" y="622" width="240" height="14" fill="#dce8f7" stroke="none"/>
+<text x="180" y="628" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">Findings</text>
+<text x="180" y="656" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">находки агентов</text>
+<text x="180" y="674" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">severity + stage</text>
+<rect x="340" y="610" width="280" height="52" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="340" y="610" width="280" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="340" y="622" width="280" height="14" fill="#dce8f7" stroke="none"/>
+<text x="480" y="628" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">recommender.recommend()</text>
+<text x="480" y="656" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">кластеризация по смыслу</text>
+<text x="480" y="674" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">план: действие/владелец/срок</text>
+<rect x="660" y="610" width="220" height="52" rx="8" fill="#ffffff" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="660" y="610" width="220" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="660" y="622" width="220" height="14" fill="#dce8f7" stroke="none"/>
+<text x="770" y="628" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">AuditResult</text>
+<text x="770" y="656" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">summary · critical/warnings</text>
+<text x="770" y="674" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">покрытие</text>
+<rect x="40" y="682" width="860" height="96" rx="10" fill="#f2f6fb" stroke="#c5d3e6" stroke-width="1"/>
+<text x="54" y="706" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a7393">Выходы (out_dir / reports)</text>
+<rect x="60" y="724" width="190" height="48" rx="8" fill="#fdf3e3" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="60" y="724" width="190" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="60" y="736" width="190" height="14" fill="#dce8f7" stroke="none"/>
+<text x="155" y="742" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">report_md</text>
+<text x="155" y="770" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">audit_report.md</text>
+<rect x="270" y="724" width="190" height="48" rx="8" fill="#fdf3e3" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="270" y="724" width="190" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="270" y="736" width="190" height="14" fill="#dce8f7" stroke="none"/>
+<text x="365" y="742" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">report_docx</text>
+<text x="365" y="770" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">audit_report.docx</text>
+<text x="365" y="788" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">via officecli</text>
+<rect x="480" y="724" width="190" height="48" rx="8" fill="#fdf3e3" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="480" y="724" width="190" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="480" y="736" width="190" height="14" fill="#dce8f7" stroke="none"/>
+<text x="575" y="742" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">deck_pptx</text>
+<text x="575" y="770" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">audit_presentation.pptx</text>
+<rect x="690" y="724" width="190" height="48" rx="8" fill="#fdf3e3" stroke="#91a7c2" stroke-width="1.4"/>
+<rect x="690" y="724" width="190" height="26" rx="8" fill="#dce8f7" stroke="none"/>
+<rect x="690" y="736" width="190" height="14" fill="#dce8f7" stroke="none"/>
+<text x="785" y="742" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#1d3557">save_metrics</text>
+<text x="785" y="770" text-anchor="middle" font-family="Cascadia Mono, Consolas, Courier New, monospace" font-size="12" fill="#33415c">audit_metrics.json</text>
+<line x1="190" y1="150" x2="190" y2="214" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="460" y1="150" x2="210" y2="214" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="560" y1="150" x2="470" y2="214" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="660" y1="129" x2="700" y2="129" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)" stroke-dasharray="5,4"/>
+<line x1="190" y1="274" x2="190" y2="354" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="470" y1="274" x2="470" y2="354" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="190" y1="408" x2="195" y2="474" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="470" y1="408" x2="470" y2="474" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="598" y1="408" x2="628" y2="474" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="660" y1="408" x2="660" y2="474" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<polyline points="330,230 330,470 310,470" fill="none" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)" stroke-dasharray="5,4"/>
+<polyline points="630,260 640,408 630,408 630,474" fill="none" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)" stroke-dasharray="5,4"/>
+<line x1="185" y1="546" x2="185" y2="610" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="470" y1="546" x2="300" y2="610" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="755" y1="546" x2="620" y2="610" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="300" y1="636" x2="340" y2="636" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="620" y1="636" x2="660" y2="636" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="400" y1="662" x2="155" y2="724" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="480" y1="662" x2="365" y2="724" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="560" y1="662" x2="575" y2="724" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+<line x1="605" y1="662" x2="770" y2="724" stroke="#5a7393" stroke-width="1.5" marker-end="url(#ah)"/>
+</svg>

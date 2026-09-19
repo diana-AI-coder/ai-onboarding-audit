@@ -1,0 +1,74 @@
+{
+  "framework_coverage": 1.0,
+  "owner_coverage": 0.8,
+  "owners_without_owner": [
+    "month-1"
+  ],
+  "checklist_completeness": 1.0,
+  "checklist_by_stage": {
+    "preboarding": 2,
+    "day-1": 2,
+    "week-1": 3,
+    "month-1": 2,
+    "day-90": 2
+  },
+  "timeline": {
+    "preboarding": {
+      "norm_days": 5.0,
+      "reached_share": 1.0,
+      "mean_fact_days": -2.9,
+      "mean_delta_days": -7.9,
+      "share_late": 0.0
+    },
+    "day-1": {
+      "norm_days": 1.0,
+      "reached_share": 1.0,
+      "mean_fact_days": 0.5,
+      "mean_delta_days": -0.5,
+      "share_late": 0.0
+    },
+    "week-1": {
+      "norm_days": 7.0,
+      "reached_share": 1.0,
+      "mean_fact_days": 6.9,
+      "mean_delta_days": -0.09999999999999964,
+      "share_late": 0.3
+    },
+    "month-1": {
+      "norm_days": 30.0,
+      "reached_share": 1.0,
+      "mean_fact_days": 36.4,
+      "mean_delta_days": 6.399999999999999,
+      "share_late": 0.7
+    },
+    "day-90": {
+      "norm_days": 60.0,
+      "reached_share": 0.8,
+      "mean_fact_days": 92.875,
+      "mean_delta_days": 32.875,
+      "share_late": 1.0
+    }
+  },
+  "overall_": {
+    "mean_delta_days": 6.15,
+    "n_stages": 5,
+    "n_novices": 10
+  },
+  "satisfaction": {
+    "mean": 3.2,
+    "by_question": {
+      "Готовность к работе через 90 дней?": 3.3,
+      "Наставник оказывал поддержку?": 2.6,
+      "План развития был понятен?": 4.3,
+      "Этапы онбординга прошли в срок?": 2.6
+    }
+  },
+  "doc_graph": {
+    "n_docs": 7,
+    "mean_wikilinks": 0.43,
+    "orphan_docs": [
+      "dogovor-trudovoy.md",
+      "n8n_trigger.md"
+    ]
+  }
+}

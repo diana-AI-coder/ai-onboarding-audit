@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/
+
+# Разовые отчёты, собранные через webhook
+examples/scenario_report/
+examples/webhook_report/
+
+# Артефакты офисных форматов можно генерировать, а не хранить
+examples/sample_report/*.docx
+examples/sample_report/*.pptx
